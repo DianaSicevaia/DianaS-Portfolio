@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/logo-icon.svg" type="image/svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>DianaS Portfolio Website</title>
+    <meta property="og:title" content="DianaS Portfolio Website">
+    <meta property="og:description" content="Hi! I'm Diana, junior frontend develope and this is my portfolio website!">
+    <meta property="og:image" content="assets/img/logo.svg">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.svg" alt="logo">
+        </div>
+        <button class="nav-toggle" arial-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#services">My Services</a></li>
+                <li class="nav__item"><a class="nav__link" href="#about">About me</a></li>
+                <li class="nav__item"><a class="nav__link" href="#work">My work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">Hi, I am <strong>Diana Sicevaia</strong></h1>
+        <p class="section__subtitle section__subtitle--intro">junior front-end dev</p>
+        <img class="intro__img" src="assets/img/pers-img.jpg" alt="a pic of Diana">
+    </section>
+
+    <!-- My services -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">What I do</h2>
+        <div class="services"> 
+            <div class="service">
+                <h3>Web-design</h3>
+                <p>Have a website idea, but don't know how to create one? I will design a nice layout of your future website!</p>      
+            </div> <!-- / service -->
+
+            <div class="service">
+                <h3>Web-dev</h3>
+                <p>Provide me the layout of your wesite and I'll buid it exactly the way you imagine it. Every new idea is a challenge that I enjoy!</p>      
+            </div> <!-- / service -->
+
+            <div class="service">
+                <h3>Tilda</h3>
+                <p>Want a website built on a zero code platform? Tilda is the great CMS to satisfy your requiremet. I use Zero Block to make your Tilda website unique!</p>      
+            </div> <!-- / service -->
+
+        </div> <!-- / services -->
+
+        <a class="btn" href="#work">My work</a>
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle section__subtitle--about">bla-bla-blabla-bla-blabla-bla-bla</p>
+
+        <div class="about-me__body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis harum quibusdam consectetur, doloremque tempore molestiae distinctio totam, facilis qui vitae esse aliquam libero quasi dolore minus sequi in? In, nesciunt?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, corporis dolores? Aliquam aut rerum, quaerat et sed, non similique nemo ipsam sit accusamus, eum nobis praesentium fugit facere commodi dignissimos.</p>
+        </div>
+
+        <img class="about-me__img" src="assets/img/pers-img2.jpg" alt="daily life image">
+    </section>
+
+    <!-- My work -->
+    <section class="my-work" id="work">
+        <h2 class="section__title">My work</h2>
+        <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+
+        <div class="portfolio">
+            
+            <!-- Portfolio item 1 -->
+            <a class="portfolio__item" href="#" >
+                <img class="portfolio__img" src="assets/img/mw1.png" alt="click me">
+            </a>
+
+        <!-- Portfolio item 2 -->
+            <a class="portfolio__item" href="#" >
+                <img class="portfolio__img" src="assets/img/mw2.png" alt="click me">
+            </a>
+
+        <!-- Portfolio item 3 -->
+            <a class="portfolio__item" href="#" >
+                <img class="portfolio__img" src="assets/img/mw3.png" alt="click me">
+            </a>
+
+        <!-- Portfolio item 4 -->
+            <a class="portfolio__item" href="#" >
+                <img class="portfolio__img" src="assets/img/mw4.png" alt="click me">
+            </a>
+
+        <!-- Portfolio item 5 -->
+            <a class="portfolio__item" href="#" >
+                <img class="portfolio__img" src="assets/img/mw5.png" alt="click me">
+            </a>
+
+        <!-- Portfolio item 6 -->
+            <a class="portfolio__item" href="#" >
+                <img class="portfolio__img" src="assets/img/mw6.png" alt="click me">
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <a class="footer__link" href="mailto:sicevaiadiana@gmail.com">sicevaiadiana@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="#">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="#">
+                    <i class="fab fa-vk"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

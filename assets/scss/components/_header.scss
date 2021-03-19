@@ -1,0 +1,102 @@
+@use '../abstract/' as *;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.nav {
+   position: fixed;
+   background: $color-dark-pastel;
+   color: $color-light;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 100;
+
+   transform: translateX(100%);
+   transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+
+   &__list {
+       list-style: none;
+       display: flex;
+       height: 100%;
+       flex-direction: column;
+       justify-content: space-evenly;
+       align-items: center;
+       margin: 0;
+       padding: 0;
+   }
+
+   &__link {
+       color: inherit;
+       font-weight: $fw-bold;
+       font-size: 1.25rem;
+
+       &:hover {
+           color: $color-accent;
+           transition: 0.3s;
+       }
+   }
+
+   &-toggle {
+       background: transparent;
+       border: 0;
+       outline: transparent;
+       padding: 0.25em;
+       margin: 1em 0;
+       cursor: pointer;
+       position: absolute;
+       right: 1em;
+       top: 1em;
+       z-index: 1000;
+   }
+}
+
+//nav-open
+.nav-open {
+    & .nav {
+        transform: translateX(0);
+
+        &-toggle {
+            position: fixed;
+        }
+    }
+
+    & .hamburger {
+        transform: rotate(0.625turn);
+
+        &::before {
+            transform: rotate(90deg) translateX(-7px);
+        }
+
+        &::after {
+            opacity: 0;
+        }
+    }
+}
+
+
+.hamburger {
+    @extend %hamburger;
+
+    display: block;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        @extend %hamburger;
+    }
+
+    &::before {top: 7px;}
+    &::after {bottom: 7px;}
+}

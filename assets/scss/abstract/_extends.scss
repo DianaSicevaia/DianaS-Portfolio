@@ -1,0 +1,9 @@
+@use '../abstract/skin' as *;
+
+%hamburger {
+    background: $color-dark-bg;
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}

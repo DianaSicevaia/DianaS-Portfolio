@@ -1,0 +1,139 @@
+@use '../abstract/' as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $color-light;
+    color: $color-dark;
+    margin: 0;
+    font-size: $font-body;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-header;
+    line-height: 1;
+    margin: 0;
+}
+
+h1 {
+    @include lg-min {
+        font-size: 3.37rem;
+    }
+
+    @include lg-md {
+        font-size: 2.5rem;
+    }
+
+    @include md {
+        font-size: 1.85rem;
+    }
+}
+
+h2 {
+    @include lg-min {
+        font-size: 2.5rem;
+    }
+
+    @include lg-md {
+        font-size: 2rem;
+    }
+
+    @include sm {
+        font-size: 1.5rem;
+    }
+}
+
+h3 {
+    @include lg-min {
+        font-size: 1.5rem;
+    }
+
+    @include lg-md {
+        font-size: 1.125rem;
+    }
+}
+
+p {
+    font-family: $font-main;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    background: $color-accent;
+    color: $color-light;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: $font-main;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1em;
+    border-radius: 3px;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:focus {
+    outline: 3px solid $color-accent;
+    outline-offset: 3px;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+
+.section {   
+    &__title {
+        margin-bottom: 0.25em;
+
+        &--intro {
+            font-weight: $fw-reg;
+
+            & strong {
+                display: block;
+            }
+        }
+    }
+
+    &__subtitle {
+        margin: 0;
+        font-size: 1.5rem;
+
+        &--intro,
+        &--about {
+            background: $color-accent;
+            padding: 0.25em 1em;
+            font-family: $font-main;
+            margin-bottom: 1em;
+        }
+    }
+}

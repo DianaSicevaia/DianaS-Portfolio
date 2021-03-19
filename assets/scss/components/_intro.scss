@@ -1,0 +1,65 @@
+@use '../abstract/' as *;
+
+.intro {
+    position: relative;
+
+    &__img {
+        box-shadow: $box-shadow;
+    }
+
+    @include sm-min {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns:
+            min-content
+            max-content;
+    }
+
+    &__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+
+        @include sm-xs {
+            min-width: 170px;
+        }
+    }
+}
+
+.section__subtitle {
+
+    @include lg-md {
+        font-size: 1.2rem;
+    }
+
+    @include md-sm {
+        font-size: 0.9rem;
+    }
+
+    &--intro {
+        text-transform: uppercase;
+        align-self: flex-start;
+        grid-column: -1 / 1; //this will make it stretch in whole length
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em; //gives us that small part of the colored line at the left side of the picture
+                        //but now the width at the right side does not match
+        width: calc(100% + 1.5em); //we just added that difference
+
+        @include lg-md {
+            padding: 0.5em 1em;
+        }
+
+        @include md-sm {
+            padding: 0.7em 1em;
+            margin-bottom: 5em;
+        }
+    }
+}
