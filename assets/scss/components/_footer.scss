@@ -5,6 +5,7 @@
     color: $color-accent;
     text-align: center;
     font-size: 1.25em;
+    font-family: $font-header;
     padding: 2.5em 0 0.5em;
 
     & a {
@@ -27,7 +28,7 @@
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0 0;
+    margin: 1em 0 0;
     padding: 0;
 
     &__link {
