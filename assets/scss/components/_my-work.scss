@@ -1,6 +1,7 @@
 @use '../abstract/' as *;
 
 .my-work {
+    padding-bottom: 3em;
     background-color: $color-dark-bg;
     color: $color-light;
     text-align: center;
@@ -28,8 +29,24 @@
     }
 
     &__item {
+        position: relative;
         background: $color-blend;
         overflow: hidden;
+
+        &:hover .portfolio__title{
+            color: $color-light;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+        font-weight: $fw-bold;
+        letter-spacing: 0.3em;
+        color: transparent;
     }
 
     &__img {
@@ -42,4 +59,8 @@
             opacity: 0.5;
         }
     }
+}
+
+.btn--resume {
+    margin-top: 3em;
 }
