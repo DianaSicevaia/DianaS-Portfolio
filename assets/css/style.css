@@ -476,6 +476,9 @@ header {
   opacity: 0.7;
   transition: 300ms;
 }
+.footer--no-cont {
+  margin-top: 13em;
+}
 
 .social-list {
   list-style: none;
