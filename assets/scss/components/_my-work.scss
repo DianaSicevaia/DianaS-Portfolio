@@ -33,9 +33,9 @@
         background: $color-blend;
         overflow: hidden;
 
-        &:hover .portfolio__title{
-            color: $color-light;
-        }
+        // &:hover .portfolio__title{
+        //     color: $color-light;
+        // }
     }
 
     &__title {
@@ -46,7 +46,7 @@
         font-size: 2em;
         font-weight: $fw-bold;
         letter-spacing: 0.3em;
-        color: transparent;
+        color: $color-light;
     }
 
     &__img {

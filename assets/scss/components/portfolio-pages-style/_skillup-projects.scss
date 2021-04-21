@@ -1,0 +1,48 @@
+@use '../../abstract/' as *;
+
+.about-skillup {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @include sm-min {
+        display: grid;
+        grid-template-columns: 1fr 560px;
+        grid-template-areas: 
+            "title img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+
+    &__img {
+        grid-area: img;
+        box-shadow: $box-shadow;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.section{
+    
+    &__title--about {
+    grid-area: title;
+    }
+
+    &__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+
+        @include sm-xs {
+            padding-right: 0;
+        }
+    }
+}
+
+.btn--view {
+    font-size: 0.75rem;
+    margin-right: 2em;
+}
